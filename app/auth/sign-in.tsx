@@ -1,6 +1,7 @@
 import { Link, Stack, useRouter } from "expo-router";
 import { Formik } from "formik";
 import {
+  Alert,
   Keyboard,
   StyleSheet,
   Text,
@@ -36,6 +37,7 @@ export default function SignInScreen() {
             await new Promise((res) => setTimeout(res, 1200));
             resetForm();
             router.navigate("/employee");
+            Alert.alert(`Welcome! Now you can fill the Employee Form`);
           } finally {
             setSubmitting(false);
           }
